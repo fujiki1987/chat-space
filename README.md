@@ -1,23 +1,12 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
 * Database creation
 ## usersテーブル
-|Column  |Type  |Options                  |
-|--------|------|-------------------------|
-|name    |string|null: false              |
-|email   |string|null: false, unique: true|
-|password|string|null: false              |
+|Column       |Type  |Options                  |
+|-------------|------|-------------------------|
+|name         |string|null: false              |
+|email        |string|null: false, unique: true|
+|password     |string|null: false              |
+|join-group_id|string|null: false              |
+
 
 ## chat-groupテーブル
 |Column    |Type   |Options    |
@@ -35,12 +24,8 @@ Things you may want to cover:
 |user_id      |integer|           |
 |chat-group_id|integer|           |
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## join-groupテーブル
+|Column       |Type   |Options    |
+|-------------|-------|-----------|
+|user_id      |integer|           |
+|chat-group_id|integer|           |
