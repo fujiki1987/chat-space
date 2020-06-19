@@ -5,27 +5,34 @@
 |name         |string|null: false              |
 |email        |string|null: false, unique: true|
 |password     |string|null: false              |
-|join-group_id|string|null: false              |
+### Association
+- has_many :chat_groups, through:  :join_groups
+- has_many :messages
 
-
-## chat-groupテーブル
+## chat_groupsテーブル
 |Column    |Type   |Options    |
 |----------|-------|-----------|
 |name      |string |null: false|
-|user_id   |integer|null: false|
-|message_id|integer|           |
+### Association
+- has_many :users, through:  :join_groups
+- has_many :messages
 
-## messageテーブル
-|Column       |Type   |Options    |
-|-------------|-------|-----------|
-|body         |text   |null: false|
-|image        |string |null: false|
-|created_at   |integer|           |
-|user_id      |integer|           |
-|chat-group_id|integer|           |
+## messagesテーブル
+|Column    |Type      |Options    |
+|----------|----------|-----------|
+|body      |text      |           |
+|image     |string    |           |
+|created_at|integer   |           |
+|user      |references|foreign_key:true, null:false|
+|chat_group|references|foreign_key:true, null:false|
+### Association
+- belongs_to :user
+- belongs_to :chat_group
 
-## join-groupテーブル
-|Column       |Type   |Options    |
-|-------------|-------|-----------|
-|user_id      |integer|           |
-|chat-group_id|integer|           |
+## join_groupsテーブル
+|Column    |Type      |Options    |
+|----------|----------|-----------|
+|user      |references|foreign_key:true, null:false|
+|chat_group|references|foreign_key:true, null:false|
+- belongs_to :user
+- belongs_to :chat_group
