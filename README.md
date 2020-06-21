@@ -7,6 +7,8 @@
 |password     |string|null: false              |
 ### Association
 - has_many :chat_groups, through: :join_groups
+- has_many :join_groups
+- has_many :messages
 
 ## chat_groupsテーブル
 |Column    |Type   |Options    |
@@ -14,7 +16,8 @@
 |name      |string |null: false|
 ### Association
 - has_many :users, through: :join_groups
-
+- has_many :join_groups
+- has_many :messages
 
 ## messagesテーブル
 |Column    |Type      |Options    |
