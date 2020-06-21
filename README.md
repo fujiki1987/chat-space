@@ -6,16 +6,15 @@
 |email        |string|null: false, unique: true|
 |password     |string|null: false              |
 ### Association
-- has_many :chat_groups, through:  :join_groups
-- has_many :messages
+- has_many :chat_groups, through: :join_groups
 
 ## chat_groupsテーブル
 |Column    |Type   |Options    |
 |----------|-------|-----------|
 |name      |string |null: false|
 ### Association
-- has_many :users, through:  :join_groups
-- has_many :messages
+- has_many :users, through: :join_groups
+
 
 ## messagesテーブル
 |Column    |Type      |Options    |
@@ -34,5 +33,6 @@
 |----------|----------|-----------|
 |user      |references|foreign_key:true, null:false|
 |chat_group|references|foreign_key:true, null:false|
+### Association
 - belongs_to :user
 - belongs_to :chat_group
