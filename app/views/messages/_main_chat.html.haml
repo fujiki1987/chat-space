@@ -1,0 +1,47 @@
+.main_chat
+
+  .chat_header
+    .group_info
+      .group_name
+        techcamp
+      .member
+        Menber：
+        .member_list
+          taro
+    = link_to 'Edit', "#", class: "edit_button"
+  
+  .chat_contents
+    .message_lists
+      .message_info
+        .user_name
+          taro
+        .date
+          2020/06/23(tue) 17:13
+      .message
+        おはよう！
+    .message_lists
+      .message_info
+        .user_name
+          taro
+        .date
+          2020/06/23(tue) 17:13
+      .message
+        こんにちは！
+    .message_lists
+      .message_info
+        .user_name
+          taro
+        .date
+          2020/06/23(tue) 17:13
+      .message
+        さようなら！
+  
+  .chat_footer
+    .message_form
+      %input{type: "text", class: "message_form__text", placeholder: "type a message"}
+      %label{class: "message_form__image"}
+        = icon('far', 'image')
+        %input{type: "file", class: "message_form__image__file"}
+    .submit_button
+      %input{type: "submit", value: "Send", class: "submit"}
+
