@@ -26,7 +26,6 @@
           width: 60px;
           display: flex;
           justify-content: flex-end;
-          color: #fff;
           .icon_cog {
             margin-left: 5px;
           }
@@ -149,4 +148,8 @@
       }
     }
   }
+}
+
+.fas {
+  color: #fff;
 }
