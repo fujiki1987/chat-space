@@ -5,14 +5,10 @@
         taro
       .icons
         .icon_edit
-<<<<<<< Updated upstream
-          <i class="fas fa-edit"></i>
-=======
           = link_to new_group_path do
             = icon('fas', 'edit')
->>>>>>> Stashed changes
         .icon_cog
-          <i class="fas fa-cog"></i>
+          = icon('fas', 'cog')
   .group_list
     - current_user.groups.each do |group|
       .group
