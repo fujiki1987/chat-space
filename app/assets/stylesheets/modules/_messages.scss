@@ -37,17 +37,18 @@
     .group_list {
       height: calc(100vh - 100px);
       background-color: #2f3e51;
-      color: #fff;
       padding: 0 20px;
       .group {
         padding-top: 20px;
         padding-bottom: 40px;
         .group_name {
           font-size: 15px;
+          color: #fff;
         }
         .message {
           font-size: 11px;
           margin-top: 5px;
+          color: #fff;
         }
       }
     }
@@ -63,7 +64,7 @@
       display: flex;
       justify-content: space-between;
       .group_info {
-        .group_name {
+        .goroups_name {
           color: #333;
           font-size: 20px;
           margin: 35px 0 15px 0;

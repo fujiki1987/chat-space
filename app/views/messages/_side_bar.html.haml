@@ -5,22 +5,19 @@
         taro
       .icons
         .icon_edit
+<<<<<<< Updated upstream
           <i class="fas fa-edit"></i>
+=======
+          = link_to new_group_path do
+            = icon('fas', 'edit')
+>>>>>>> Stashed changes
         .icon_cog
           <i class="fas fa-cog"></i>
   .group_list
-    .group
-      .group_name
-        techcamp
-      .message
-        おはよう！
-    .group
-      .group_name
-        techcamp
-      .message
-        まだメッセージはありません。
-    .group
-      .group_name
-        techcamp
-      .message
-        まだメッセージはありません。
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group_name
+            = group.name
+          .message
+            メッセージはまだありません
