@@ -63,7 +63,8 @@
 }
 
 .chat_header {
-  margin: 0 40px;
+  border-bottom: 1px solid #eee;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   .group_info {
@@ -170,4 +171,8 @@
 
 .fas {
   color: #fff;
+}
+
+a {
+  text-decoration: none;
 }

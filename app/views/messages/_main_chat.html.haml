@@ -11,7 +11,6 @@
     = link_to 'Edit',  "edit", class: "edit_button"
   
   .MessageField
-    = render @messages
     
   .Footer
     = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
